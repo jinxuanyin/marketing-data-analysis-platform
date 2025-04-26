@@ -1,0 +1,41 @@
+# 排除上传目录
+/uploads
+/results
+/backend/fonts
+/backend/__pycache__
+
+# 排除前端node_modules
+/node_modules
+/frontend/node_modules
+
+# 排除IDE配置文件
+.vscode
+.idea
+
+# 排除系统文件
+.DS_Store
+Thumbs.db
+
+# 排除日志文件
+/logs
+
+# 排除环境变量文件
+.env
+.env.local
+
+# 排除Python缓存文件
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# 排除前端构建文件
+/frontend/build
+/frontend/dist
+
+# 排除临时文件
+*.tmp
+*.bakfrontend/datadata/
+frontend/datadata/
+.venv/
+node_modules/

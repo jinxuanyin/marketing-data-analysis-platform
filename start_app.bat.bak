@@ -1,0 +1,23 @@
+@echo off
+echo 正在启动营销数据分析平台...
+
+echo 启动后端服务...
+echo 正在安装Python依赖，这可能需要一些时间...
+start cmd /k "cd /d %~dp0backend && python -m pip install --no-build-isolation -r requirements.txt && echo Python依赖安装完成！ && python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000 || echo 后端启动失败，请查看错误信息"
+
+echo 等待后端服务启动...
+timeout /t 8 /nobreak > nul
+
+echo 启动前端服务...
+start cmd /k "cd /d %~dp0frontend && npm install && npm start"
+
+echo 服务启动中，请稍候...
+timeout /t 3 /nobreak > nul
+
+echo 应用已启动！
+echo 后端API地址: http://localhost:8000
+echo 前端页面地址: http://localhost:3000
+echo.
+echo 提示：关闭此窗口不会停止服务，如需停止服务请关闭对应的命令行窗口。
+echo.
+pause

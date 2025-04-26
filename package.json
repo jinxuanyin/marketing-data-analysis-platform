@@ -1,0 +1,14 @@
+{
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "env": {
+      "jest/globals": true
+    }
+  },
+  "scripts": {
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
+  }
+} 
